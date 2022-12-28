@@ -1,24 +1,11 @@
 import React, { useState } from "react";
-import { helpData } from "../../utils/terminalData/data";
+import { helpData, lsHome, lsProjects } from "../../utils/terminalData/data";
 
 function Screen() {
-  console.log("screen rendered");
-  const [history, sethistory] = useState("");
   const [terminalHistory, setterminalHistory] = useState(
     React.createElement("div", { children: [] })
   );
-
-  function newLineText(text) {
-    return text.split("\n").map((str, i) => <p key={i}>{str}</p>);
-  }
-
-  function handleHistory(command, txt) {
-    let st = `\nguest@hapi.com :~$ ${command} \n`;
-    txt = history + st + txt;
-    sethistory(txt);
-    txt = newLineText(txt);
-    setterminalHistory(txt);
-  }
+  const [cwd, setcwd] = useState("");
 
   function handleTerminalHistory(components) {
     let temp = React.createElement("div", {
@@ -27,8 +14,14 @@ function Screen() {
     setterminalHistory(temp);
   }
 
-  function addCommandLine() {
-    //to-do add the commndline text with the command
+  function addCommandLine(command, children) {
+    return React.createElement("div", {
+      className: "my-4",
+      children: [
+        <div className="text-white mb-4">{`guest@hapi.com : ${cwd} $ ${command}`}</div>,
+        children,
+      ],
+    });
   }
 
   function formatHelpData(helpData) {
@@ -62,24 +55,66 @@ function Screen() {
       children: [commandDiv, descriptionDiv],
     });
 
-    return helpDataDiv;
+    return addCommandLine("help", helpDataDiv);
+  }
+
+  function handlels() {
+    let lscomponents = [];
+    if (cwd === "") {
+      for (let i = 0; i < lsHome.length; i++) {
+        if (lsHome[i].type === "file") {
+          lscomponents.push(
+            <div className="text-green-500">{lsHome[i].name}</div>
+          );
+        } else if (lsHome[i].type === "folder") {
+          lscomponents.push(
+            <div className="text-blue-800">{lsHome[i].name}</div>
+          );
+        }
+      }
+    } else if (cwd === "projects/") {
+      lscomponents = lsProjects.map((project) => {
+        return <div className="text-green-500">{project}</div>;
+      });
+    }
+    let lsDiv = React.createElement("div", {
+      className: "grid grid-cols-4 w-4/5",
+      children: lscomponents,
+    });
+    return addCommandLine("ls", lsDiv);
+  }
+
+  function changeCwd(dir, command) {
+    handleTerminalHistory(
+      <div className="text-white">{`guest@hapi.com : ${cwd} $ ${command}`}</div>
+    );
+    setcwd(dir);
+  }
+
+  function clearTerminal() {
+    setterminalHistory(React.createElement("div", { children: [] }));
   }
 
   function handleCommandResponse(command) {
     if (command === "help") {
       handleTerminalHistory(formatHelpData(helpData));
+    } else if (command === "ls") {
+      handleTerminalHistory(handlels());
+    } else if (command === "cd projects" || command === "cd projects/") {
+      changeCwd("projects/", "cd projects/");
+    } else if (command === "cd ~") {
+      changeCwd("", "cd ~");
+    } else if (command === "clear") {
+      clearTerminal();
+    } else if (command === "cd ../") {
+      changeCwd("", "cd ../");
     } else if (command === "run about.md") {
-    } else if (command === "cd projects") {
     } else if (command === "run contact.md") {
     } else if (command === "run education.md") {
-    } else if (command === "clear") {
     } else if (command === "run experience.md") {
     } else if (command === "run achivements.md") {
-    } else if (command === "../") {
-    } else if (command === "cd ~") {
     } else if (command === "run skills.md") {
     } else {
-      handleHistory(command, "I don't know what you are saying man!!");
     }
   }
   function handleKeyUp(e) {
@@ -97,25 +132,27 @@ function Screen() {
             {terminalHistory}
           </div>
           <div className="flex justify-start">
-            <div className="text-white">guest@hapi.com :~$</div>
+            <div className="text-white">{`guest@hapi.com : ${cwd} $`}</div>
             <input
               className="pl-2 bg-slate-800 border-none w-auto text-white caret-white caret-2 focus: outline-none"
               type="text"
               onKeyUp={handleKeyUp}
             />
           </div>
-          <div className="text-white flex justify-start">
-            <div>
-              <div className="text-green-500">ls</div>
-              <div className="text-green-500">cd</div>
+          {/* <div className="my-4">
+            <div className="text-white mb-4">guest@hapi.com :~$ ls</div>
+            <div className="text-green-500 grid grid-cols-4 w-4/5">
+              <div>about.md</div>
+              <div>achivements.md</div>
+              <div>contact.md</div>
+              <div>education.md</div>
+              <div>experience.md</div>
+              <div className="text-blue-800">projects/</div>
+              <div>skills.md</div>
             </div>
-            <div className="ml-5">
-              <div className="">list of available files and directories</div>
-              <div className="">change directory</div>
-            </div>
-          </div>
+          </div> */}
         </div>
-        <div className="w-4/5">output</div>
+        <div className="w-4/5 ">output</div>
       </div>
     </>
   );

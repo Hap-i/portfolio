@@ -25,6 +25,41 @@ const helpData = [
   },
 ];
 
+const lsHome = [
+  {
+    type: "file",
+    name: "about.md",
+  },
+  {
+    type: "file",
+    name: "achivements.md",
+  },
+  {
+    type: "file",
+    name: "contact.md",
+  },
+  {
+    type: "file",
+    name: "education.md",
+  },
+  {
+    type: "file",
+    name: "experience.md",
+  },
+  {
+    type: "folder",
+    name: "projects/",
+  },
+  {
+    type: "file",
+    name: "skills.md",
+  },
+];
+
+const lsProjects = ["project1.md", "project2.md", "project3.md"];
+
 module.exports = {
   helpData,
+  lsHome,
+  lsProjects,
 };
