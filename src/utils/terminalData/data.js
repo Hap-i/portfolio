@@ -74,9 +74,21 @@ thinker, and innovative creator to develop software that is
 customized to meet a company’s organizational needs, highlight
 their core competencies, and further their success`;
 
+const logoData = [
+  " $$$$$$\\                                                 $$\\",
+  "$$  __$$\\                                                $$ |",
+  "$$ /  \\__|$$\\   $$\\ $$\\    $$\\  $$$$$$\\  $$$$$$$\\   $$$$$$$ |$$\\   $$\\",
+  "\\$$$$$$\\  $$ |  $$ |\\$$\\  $$  |$$  __$$\\ $$  __$$\\ $$  __$$ |$$ |  $$ |",
+  " \\____$$\\ $$ |  $$ | \\$$\\$$  / $$$$$$$$ |$$ |  $$ |$$ /  $$ |$$ |  $$ |",
+  "$$\\   $$ |$$ |  $$ |  \\$$$  /  $$   ____|$$ |  $$ |$$ |  $$ |$$ |  $$ |",
+  "\\$$$$$$  |\\$$$$$$  |   \\$  /   \\$$$$$$$\\ $$ |  $$ |\\$$$$$$$ |\\$$$$$$  |",
+  " \\______/  \\______/     \\_/     \\_______|\\__|  \\__| \\_______| \\______/",
+];
+
 module.exports = {
   helpData,
   lsHome,
   lsProjects,
   aboutData,
+  logoData,
 };

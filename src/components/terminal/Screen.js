@@ -5,6 +5,7 @@ import {
   lsHome,
   lsProjects,
 } from "../../utils/terminalData/data";
+import Header from "./Header";
 
 function Screen() {
   const [terminalHistory, setterminalHistory] = useState(
@@ -23,7 +24,7 @@ function Screen() {
 
   function addCommandLine(command, children) {
     return React.createElement("div", {
-      className: "my-4",
+      className: "mb-4",
       children: [
         <div className="text-white mb-4">{`guest@hapi.com : ${cwd} $ ${command}`}</div>,
         children,
@@ -123,14 +124,22 @@ function Screen() {
       formatHelpData();
     } else if (command === "ls") {
       handlels();
-    } else if (command === "cd projects" || command === "cd projects/") {
-      changeCwd("projects/", "cd projects/");
-    } else if (command === "cd ~") {
-      changeCwd("", "cd ~");
+    } else if (command.includes("cd")) {
+      let fileName = command.trim().split(" ")[1];
+      if (fileName === "projects" || fileName === "projects/")
+        changeCwd("projects/", "cd projects/");
+      else if (fileName === "~") changeCwd("", "cd ~");
+      else if (fileName === "../") changeCwd("", "cd ../");
+      else {
+        handleTerminalHistory(
+          addCommandLine(
+            command,
+            <div>{command}: No such file or directory</div>
+          )
+        );
+      }
     } else if (command === "clear") {
       clearTerminal();
-    } else if (command === "cd ../") {
-      changeCwd("", "cd ../");
     } else if (command.includes("run")) {
       let fileName = command.trim().split(" ")[1];
       if (cwd === "" && fileName === "about.md") handleAbout();
@@ -140,8 +149,23 @@ function Screen() {
       else if (cwd === "" && fileName === "experience.md") handleAbout();
       else if (cwd === "" && fileName === "skills.md") handleAbout();
       else {
+        handleTerminalHistory(
+          addCommandLine(
+            command,
+            <div>{command}: No such file or directory</div>
+          )
+        );
       }
     } else {
+      handleTerminalHistory(
+        addCommandLine(
+          command,
+          <div>
+            {command}: command Not found. Use help to see the list of available
+            commands
+          </div>
+        )
+      );
     }
   }
   function handleKeyUp(e) {
@@ -159,7 +183,8 @@ function Screen() {
     <>
       <div className="flex justify-between">
         <div className="bg-slate-800 h-screen w-screen pl-4 pb-20 overflow-auto">
-          <div className="animate-type"></div>
+          <Header></Header>
+          <div className="mt-5"></div>
           <div className="text-white" id="history">
             {terminalHistory}
           </div>
@@ -173,20 +198,6 @@ function Screen() {
               onKeyUp={handleKeyUp}
             />
           </div>
-          {/* <div>
-            <p className="text-white w-3/5">
-              Experienced software engineer with a passion for developing
-              innovative programs that expedite the efficiency and effectiveness
-              of organizational success. Well-versed in technology and writing
-              code to create systems that are reliable and user-friendly.
-              Skilled leader who has the proven ability to motivate, educate,
-              and manage a team of professionals to build software programs and
-              effectively track changes. Confident communicator, strategic
-              thinker, and innovative creator to develop software that is
-              customized to meet a company’s organizational needs, highlight
-              their core competencies, and further their success
-            </p>
-          </div> */}
         </div>
       </div>
     </>
