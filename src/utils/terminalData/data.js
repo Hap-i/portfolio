@@ -56,10 +56,27 @@ const lsHome = [
   },
 ];
 
-const lsProjects = ["project1.md", "project2.md", "project3.md"];
+const lsProjects = [
+  "allProjects.md",
+  "project1.md",
+  "project2.md",
+  "project3.md",
+];
+
+const aboutData = `Experienced software engineer with a passion for developing
+innovative programs that expedite the efficiency and effectiveness
+of organizational success. Well-versed in technology and writing
+code to create systems that are reliable and user-friendly.
+Skilled leader who has the proven ability to motivate, educate,
+and manage a team of professionals to build software programs and
+effectively track changes. Confident communicator, strategic
+thinker, and innovative creator to develop software that is
+customized to meet a company’s organizational needs, highlight
+their core competencies, and further their success`;
 
 module.exports = {
   helpData,
   lsHome,
   lsProjects,
+  aboutData,
 };
