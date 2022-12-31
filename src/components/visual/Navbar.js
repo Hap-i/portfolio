@@ -8,12 +8,6 @@ function Navbar() {
       name: "Home",
     },
     {
-      name: "About",
-    },
-    {
-      name: "Skills",
-    },
-    {
       name: "Projects",
     },
     {
@@ -24,7 +18,7 @@ function Navbar() {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 bg-black text-white px-4 md:justify-around">
+    <div className="flex justify-between items-center w-full h-20 px-4 md:justify-around">
       <div>
         <h1 className="font-logo text-5xl">Suvendu</h1>
       </div>
@@ -33,7 +27,7 @@ function Navbar() {
           return (
             <li
               key={i}
-              className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+              className="px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 duration-200">
               {item.name}
             </li>
           );
