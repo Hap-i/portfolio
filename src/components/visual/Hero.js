@@ -6,14 +6,20 @@ import { RiSendPlaneFill } from "react-icons/ri";
 function Hero() {
   return (
     <div className=" mt-5 md:mt-20">
-      <div className="flex flex-col-reverse items-center justify-center md:flex-row md:space-x-32">
+      <div className="flex flex-col-reverse items-center justify-center md:flex-row md:space-x-24">
         <div className="flex space-x-5 cursor-pointer mt-10  md:flex-col md:space-y-10 md:space-x-0 md:mt-0">
-          <FaLinkedin size={25}></FaLinkedin>
-          <FaTwitterSquare size={25}></FaTwitterSquare>
-          <FaGithubSquare size={25}></FaGithubSquare>
+          <FaLinkedin
+            size={25}
+            className="hover:scale-125 duration-200"></FaLinkedin>
+          <FaTwitterSquare
+            size={25}
+            className="hover:scale-125 duration-200"></FaTwitterSquare>
+          <FaGithubSquare
+            size={25}
+            className="hover:scale-125 duration-200"></FaGithubSquare>
         </div>
         <div className="flex flex-col items-center md:items-start">
-          <div className="font-bold mb-3 text-2xl mt-2 md:text-4xl md:mt-0 ">
+          <div className="font-bold mb-3 text-2xl mt-2 md:text-5xl md:mt-0 ">
             Suvendu Sekhar Sahoo👋
           </div>
           <div className="hidden md:flex md:items-center md:mb-3">
@@ -27,7 +33,10 @@ function Hero() {
           <div className="flex justify-center space-x-6">
             <button
               className="flex items-center space-x-4 justify-center
-            text-white bg-black mt-5 px-3 py-2 rounded-lg hover:scale-105 duration-2000 border-2 border-black hover:bg-white hover:text-black hover:border 
+            text-white bg-black mt-5 px-3 py-2 rounded-lg 
+            hover:scale-105 duration-2000 
+          hover:bg-white hover:text-black hover:border 
+            border-2 border-black 
            md:mt-8">
               <div>Resume</div>
               <div>

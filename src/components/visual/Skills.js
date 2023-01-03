@@ -60,7 +60,7 @@ function Skills() {
   return (
     <div className="mt-20 md:mt-36">
       <div className="flex flex-col items-center">
-        <div className="text-4xl font-semibold mb-10">Skills</div>
+        <div className="text-5xl font-semibold mb-10">Skills</div>
         <div className="flex space-x-20 md:space-x-48">
           <div>
             <div className="text-xl font-medium mb-5">Languages</div>
@@ -89,7 +89,7 @@ function Skills() {
             })}
           </div>
         </div>
-        <div className="flex space-x-20 mt-10 md:space-x-48">
+        <div className="flex space-x-20 mt-10 md:space-x-44">
           <div>
             <div className="text-xl font-medium mb-5">Databases</div>
             {databases.map((database, i) => {

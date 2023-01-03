@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Skills from "./Skills";
 import Screen from "../terminal/Screen";
+import Experience from "./Experience";
 function Home() {
   const [keyPressed, setkeyPressed] = useState("");
   const [terminal, setterminal] = useState(false);
@@ -24,6 +25,7 @@ function Home() {
       <Hero></Hero>
       <Skills></Skills>
       <FeaturedProjects></FeaturedProjects>
+      <Experience></Experience>
     </div>
   );
 }

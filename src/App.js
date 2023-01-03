@@ -6,6 +6,7 @@ function App() {
   // TODO: Implement Darkmode
   // TODO: secret text for Events
   // TODO: hide scrollbar
+  // TODO: loading screen at initial load
   return <Home></Home>;
 }
 

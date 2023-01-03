@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 md:justify-around">
       <div>
-        <h1 className="font-logo text-5xl">Suvendu</h1>
+        <h1 className="font-logo text-5xl cursor-pointer">Suvendu</h1>
       </div>
       <ul className="hidden md:flex">
         {navItems.map((item, i) => {
