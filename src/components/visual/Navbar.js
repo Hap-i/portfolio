@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+
 function Navbar() {
   const [menu, setmenu] = useState(false);
   const navItems = [
@@ -18,7 +20,11 @@ function Navbar() {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 md:justify-around">
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5, type: "spring", stiffness: 105 }}
+      className="flex justify-between items-center w-full h-20 px-4 md:justify-around">
       <div>
         <h1 className="font-logo text-5xl cursor-pointer">Suvendu</h1>
       </div>
@@ -54,7 +60,7 @@ function Navbar() {
           })}
         </ul>
       )}
-    </div>
+    </motion.div>
   );
 }
 

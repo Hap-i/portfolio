@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import {
   SiTypescript,
@@ -61,7 +62,11 @@ function Skills() {
     <div className="mt-20 md:mt-36">
       <div className="flex flex-col items-center">
         <div className="text-5xl font-semibold mb-10">Skills</div>
-        <div className="flex space-x-20 md:space-x-48">
+        <motion.div
+          nitial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1.5 }}
+          className="flex space-x-20 md:space-x-48">
           <div>
             <div className="text-xl font-medium mb-5">Languages</div>
             {languages.map((language, i) => {
@@ -88,7 +93,7 @@ function Skills() {
               );
             })}
           </div>
-        </div>
+        </motion.div>
         <div className="flex space-x-20 mt-10 md:space-x-44">
           <div>
             <div className="text-xl font-medium mb-5">Databases</div>

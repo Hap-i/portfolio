@@ -3,7 +3,6 @@ import Home from "./components/visual/Home";
 function App() {
   // TODO: Implement React Router
   // TODO: Implemnt redux
-  // TODO: Implement Darkmode
   // TODO: secret text for Events
   // TODO: hide scrollbar
   // TODO: loading screen at initial load
