@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import Skills from "./Skills";
 import Screen from "../terminal/Screen";
 import Experience from "./Experience";
+import Contact from "./Contact";
+import Footer from "./Footer";
 function Home() {
   const [keyPressed, setkeyPressed] = useState("");
   const [terminal, setterminal] = useState(false);
@@ -26,6 +28,8 @@ function Home() {
       <Skills></Skills>
       <FeaturedProjects></FeaturedProjects>
       <Experience></Experience>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }

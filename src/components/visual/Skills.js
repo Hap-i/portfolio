@@ -63,7 +63,7 @@ function Skills() {
       <div className="flex flex-col items-center">
         <div className="text-5xl font-semibold mb-10">Skills</div>
         <motion.div
-          nitial={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1.5 }}
           className="flex space-x-20 md:space-x-48">

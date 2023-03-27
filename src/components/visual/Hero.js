@@ -14,13 +14,13 @@ function Hero() {
       <div className="flex flex-col-reverse items-center justify-center md:flex-row md:space-x-24">
         <div className="flex space-x-5 mt-10  md:flex-col md:space-y-10 md:space-x-0 md:mt-0">
           <FaLinkedin
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaLinkedin>
           <FaTwitterSquare
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaTwitterSquare>
           <FaGithubSquare
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaGithubSquare>
         </div>
         <div className="flex flex-col items-center md:items-start">
