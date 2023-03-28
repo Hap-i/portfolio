@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Contact() {
   return (
-    <div className="mt-32">
+    <div className="mt-32 mb-32">
       <div className="flex justify-center text-4xl font-semibold">
         Have Something in Mind ?
       </div>

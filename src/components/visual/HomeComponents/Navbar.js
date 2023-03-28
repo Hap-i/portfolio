@@ -40,10 +40,8 @@ function Navbar() {
       <ul className="hidden md:flex">
         {navItems.map((item, i) => {
           return (
-            <Link to={item.url}>
-              <li
-                key={i}
-                className="px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 duration-150 hover:underline hover:underline-offset-4">
+            <Link to={item.url} key={i}>
+              <li className="px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 duration-150 hover:underline hover:underline-offset-4">
                 {item.name}
               </li>
             </Link>

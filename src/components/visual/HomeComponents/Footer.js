@@ -3,7 +3,7 @@ import { FaLinkedin, FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 import { GithubUrl, LinkedInUrl, TwitterUrl } from "../../../utils/urls";
 function Footer() {
   return (
-    <div className="mb-5 mt-40">
+    <div className="mb-5 mt-10">
       <div className="flex justify-center space-x-5">
         <a href={LinkedInUrl} rel="noreferrer" target="_blank">
           <FaLinkedin
