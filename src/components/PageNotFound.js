@@ -5,7 +5,9 @@ function PageNotFound() {
   return (
     <div>
       <Navbar></Navbar>
-      <div>Page Not Found</div>
+      <div className="flex justify-center mt-10">
+        <img src="assets/404Image.svg" alt="404 Page Not Found" />
+      </div>
     </div>
   );
 }
