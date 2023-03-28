@@ -33,7 +33,7 @@ function Navbar() {
           return (
             <li
               key={i}
-              className="px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 duration-200">
+              className="px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 duration-150 hover:underline hover:underline-offset-4">
               {item.name}
             </li>
           );
