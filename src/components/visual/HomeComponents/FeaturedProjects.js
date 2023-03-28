@@ -1,6 +1,7 @@
 import React from "react";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function FeaturedProjects() {
   return (
@@ -86,14 +87,16 @@ function FeaturedProjects() {
         </div>
       </div>
       <div className="mt-16 flex justify-center">
-        <button
-          className="text-white bg-black mt-5 px-3 py-2 rounded-lg w-64
-            hover:scale-105 duration-2000 
+        <Link to="/project">
+          <button
+            className="text-white bg-black mt-5 px-3 py-2 rounded-lg w-64
+          hover:scale-105 duration-2000 
           hover:bg-white hover:text-black hover:border 
-            border-2 border-black flex  justify-center items-center space-x-2">
-          <div>View all Proojects</div>
-          <AiOutlineArrowRight></AiOutlineArrowRight>
-        </button>
+          border-2 border-black flex  justify-center items-center space-x-2">
+            <div>View all Proojects</div>
+            <AiOutlineArrowRight></AiOutlineArrowRight>
+          </button>
+        </Link>
       </div>
     </div>
   );

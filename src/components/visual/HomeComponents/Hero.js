@@ -3,6 +3,7 @@ import { FaLinkedin, FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -48,15 +49,17 @@ function Hero() {
                 <BsDownload></BsDownload>
               </div>
             </button>
-            <button
-              className="flex items-center space-x-4 justify-center
-            text-white bg-black mt-5 px-3 py-2 rounded-lg hover:scale-105 duration-2000 border-2 border-black hover:bg-white hover:text-black hover:border 
-            md:mt-8">
-              <div>Say Hi !</div>
-              <div>
-                <RiSendPlaneFill></RiSendPlaneFill>
-              </div>
-            </button>
+            <Link to="/contact">
+              <button
+                className="flex items-center space-x-4 justify-center
+              text-white bg-black mt-5 px-3 py-2 rounded-lg hover:scale-105 duration-2000 border-2 border-black hover:bg-white hover:text-black hover:border 
+              md:mt-8">
+                <div>Say Hi !</div>
+                <div>
+                  <RiSendPlaneFill></RiSendPlaneFill>
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
         <div className="">
