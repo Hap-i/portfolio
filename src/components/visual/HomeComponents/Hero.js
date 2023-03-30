@@ -3,6 +3,7 @@ import { FaLinkedin, FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -14,13 +15,13 @@ function Hero() {
       <div className="flex flex-col-reverse items-center justify-center md:flex-row md:space-x-24">
         <div className="flex space-x-5 mt-10  md:flex-col md:space-y-10 md:space-x-0 md:mt-0">
           <FaLinkedin
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaLinkedin>
           <FaTwitterSquare
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaTwitterSquare>
           <FaGithubSquare
-            size={25}
+            size={30}
             className="hover:scale-125 duration-200 cursor-pointer"></FaGithubSquare>
         </div>
         <div className="flex flex-col items-center md:items-start">
@@ -48,15 +49,17 @@ function Hero() {
                 <BsDownload></BsDownload>
               </div>
             </button>
-            <button
-              className="flex items-center space-x-4 justify-center
-            text-white bg-black mt-5 px-3 py-2 rounded-lg hover:scale-105 duration-2000 border-2 border-black hover:bg-white hover:text-black hover:border 
-            md:mt-8">
-              <div>Say Hi !</div>
-              <div>
-                <RiSendPlaneFill></RiSendPlaneFill>
-              </div>
-            </button>
+            <Link to="/contact">
+              <button
+                className="flex items-center space-x-4 justify-center
+              text-white bg-black mt-5 px-3 py-2 rounded-lg hover:scale-105 duration-2000 border-2 border-black hover:bg-white hover:text-black hover:border 
+              md:mt-8">
+                <div>Say Hi !</div>
+                <div>
+                  <RiSendPlaneFill></RiSendPlaneFill>
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
         <div className="">

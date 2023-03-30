@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import FeaturedProjects from "./FeaturedProjects";
-import Hero from "./Hero";
-import Navbar from "./Navbar";
-import Skills from "./Skills";
-import Screen from "../terminal/Screen";
-import Experience from "./Experience";
+import FeaturedProjects from "../components/visual/HomeComponents/FeaturedProjects";
+import Hero from "../components/visual/HomeComponents/Hero";
+import Navbar from "../components/visual/HomeComponents/Navbar";
+import Skills from "../components/visual/HomeComponents/Skills";
+import Screen from "../components/terminal/Screen";
+import Experience from "../components/visual/HomeComponents/Experience";
+import Contact from "../components/visual/HomeComponents/Contact";
+import Footer from "../components/visual/HomeComponents/Footer";
 function Home() {
   const [keyPressed, setkeyPressed] = useState("");
   const [terminal, setterminal] = useState(false);
@@ -26,6 +28,8 @@ function Home() {
       <Skills></Skills>
       <FeaturedProjects></FeaturedProjects>
       <Experience></Experience>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }

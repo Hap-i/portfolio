@@ -63,7 +63,7 @@ function Skills() {
       <div className="flex flex-col items-center">
         <div className="text-5xl font-semibold mb-10">Skills</div>
         <motion.div
-          nitial={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1.5 }}
           className="flex space-x-20 md:space-x-48">
@@ -73,7 +73,7 @@ function Skills() {
               return (
                 <div
                   key={i}
-                  className="flex space-x-2 mb-2 items-center md:text-xl">
+                  className="flex space-x-2 mb-2 items-center md:text-xl cursor-pointer hover:scale-105 duration-150">
                   {language.logo}
                   <div>{language.name}</div>
                 </div>
@@ -86,7 +86,7 @@ function Skills() {
               return (
                 <div
                   key={i}
-                  className="flex space-x-2 mb-2 items-center md:text-xl">
+                  className="flex space-x-2 mb-2 items-center md:text-xl cursor-pointer hover:scale-105 duration-150">
                   {framework.logo}
                   <div>{framework.name}</div>
                 </div>
@@ -101,7 +101,7 @@ function Skills() {
               return (
                 <div
                   key={i}
-                  className="flex space-x-2 mb-2 items-center md:text-xl">
+                  className="flex space-x-2 mb-2 items-center md:text-xl cursor-pointer hover:scale-105 duration-150">
                   {database.logo}
                   <div>{database.name}</div>
                 </div>
@@ -110,7 +110,7 @@ function Skills() {
           </div>
           <div>
             <div className="text-xl font-medium mb-5">Doc as a Service</div>
-            <div className="flex space-x-2 mb-2 items-center md:text-xl">
+            <div className="flex space-x-2 mb-2 items-center md:text-xl cursor-pointer hover:scale-105 duration-150">
               <SiSwagger></SiSwagger>
               <div>Swagger</div>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Experience() {
   return (
-    <div>
+    <div className="px-72">
       <div className="flex justify-center mt-28 text-4xl font-semibold mb-12">
         Work Experience
       </div>
@@ -14,16 +14,30 @@ function Experience() {
               July 2021 - Present
             </time>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-black">
+              Systems Engineer
+            </h3>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-black">
               Tata Consultancy Services
             </h3>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              <ul className="list-outside text-black">
-                <li>Worked on Data Analysis Projects</li>
-                <li>Worked on a Chatbot Development project</li>
-                <li>Developed Ticket Management system</li>
-                <li>Developed Custom Widgets for Agents</li>
-              </ul>
-            </p>
+            {/* <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"> */}
+            <ul className="list-outside text-black">
+              <li>
+                Implemented a Ticketing system for a chatbot to handle customers
+                coming in out-of-office hours, resulting in 34% more customer
+                engagement.
+              </li>
+              <li>
+                Worked on integrating various third-party systems with chatbot
+                such as CRM, RPA bots, SendGrid, Google Cloud Functions, and
+                Storage.
+              </li>
+              <li>
+                Contributed majorly to Anomaly Detection, custom widgets,
+                webform, and logging features.
+              </li>
+              <li>Developed Custom Widgets for Agents</li>
+            </ul>
+            {/* </p> */}
           </li>
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -33,12 +47,12 @@ function Experience() {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-black">
               Target Integration
             </h3>
-            <p className="mb-4 text-base font-normal dark:text-gray-400">
-              <ul className="list-outside text-black">
-                <li>Got To learn about ERP systems</li>
-                <li>Worked on a Hospital Management ERP system using Odoo</li>
-              </ul>
-            </p>
+            {/* <p className="mb-4 text-base font-normal dark:text-gray-400"> */}
+            <ul className="list-outside text-black">
+              <li>Got To learn about ERP systems</li>
+              <li>Worked on a Hospital Management ERP system using Odoo</li>
+            </ul>
+            {/* </p> */}
           </li>
         </ol>
       </div>
