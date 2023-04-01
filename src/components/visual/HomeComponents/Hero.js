@@ -12,8 +12,8 @@ function Hero() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.5, duration: 1.5 }}
       className=" mt-5 md:mt-20">
-      <div className="flex flex-col-reverse items-center justify-center md:flex-row md:space-x-24">
-        <div className="flex space-x-5 mt-10  md:flex-col md:space-y-10 md:space-x-0 md:mt-0">
+      <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:space-x-24 px-10">
+        <div className="flex space-x-5 mt-10  lg:flex-col lg:space-y-10 lg:space-x-0 lg:mt-0">
           <a href="https://www.linkedin.com/in/suvendu-sekhar-sahoo/">
             <FaLinkedin
               size={30}

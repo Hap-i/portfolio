@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <div className="mt-32 mb-32">
-      <div className="flex justify-center text-4xl font-semibold">
+      <div className="flex justify-center text-4xl font-semibold text-center">
         Have Something in Mind ?
       </div>
       <div className="flex justify-center text-3xl font-medium mt-3 ">
