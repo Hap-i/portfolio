@@ -4,8 +4,22 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 function FeaturedProjects() {
-  const proj1Feat = ["Authen", "Auhkl", "djlk k", "sdfsdf"];
-  const proj2Feat = ["Authen", "Auhkl", "djlk k", "sdfsdf"];
+  const proj1Feat = [
+    "Authentication",
+    "Authorization",
+    "Access Control",
+    "Realtime Colab",
+    "Auto saving",
+    "Document sharing",
+  ];
+  const proj2Feat = [
+    "Music Player",
+    "Volume Control",
+    "Music Playlist",
+    "Video Background",
+    "Mute All",
+    "YT Video Embedding",
+  ];
   return (
     <div className="mt-20 md:mt-36 ">
       <div className="flex flex-col items-center">
@@ -19,7 +33,7 @@ function FeaturedProjects() {
         </div>
         <div className="flex flex-col justify-center">
           <div className="text-xl md:text-3xl md:mb-10 mb-5 md:mt-0 mt-5">
-            Sorting Visualizer
+            Shinobi Docs
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
             {proj1Feat.map((e) => {
@@ -43,7 +57,7 @@ function FeaturedProjects() {
           </div>
           <div
             className="
-          flex md:space-x-5 space-x-3">
+          flex md:space-x-5 space-x-3 justify-center">
             <button
               className="text-white bg-black mt-5 px-3 py-2 rounded-lg md:w-44 w-28
             hover:scale-105 duration-2000 
@@ -63,10 +77,10 @@ function FeaturedProjects() {
       </div>
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:space-x-20 mb-16">
         <div className="flex flex-col justify-center">
-          <div className="text-xl md:text-3xl md:mb-10 mb-5 md:mt-0 mt-5">
-            Sorting Visualizer
+          <div className="text-xl md:text-3xl md:mb-10 mb-5 md:mt-0 mt-5 ml-5 lg:ml-0">
+            Dev Focous
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 ml-5 lg:ml-0">
             {proj2Feat.map((e) => {
               return (
                 <div className="flex items-center space-x-1" key={e}>
@@ -88,7 +102,7 @@ function FeaturedProjects() {
           </div>
           <div
             className="
-          flex md:space-x-5 space-x-3">
+          flex md:space-x-5 space-x-3 justify-center">
             <button
               className="text-white bg-black mt-5 px-3 py-2 rounded-lg md:w-44 w-28
             hover:scale-105 duration-2000 
@@ -106,7 +120,11 @@ function FeaturedProjects() {
           </div>
         </div>
         <div className="md:w-[500px] w-[300px]">
-          <img src="assets/projects/sorting-visualizer.png" alt="" />
+          <video
+            src="assets/projects/DevFocous-demo.webm"
+            autoPlay
+            loop
+            muted></video>
         </div>
       </div>
       <div className="mt-16 flex justify-center">
