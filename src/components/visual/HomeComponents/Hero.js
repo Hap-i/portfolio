@@ -14,17 +14,23 @@ function Hero() {
       className=" mt-5 md:mt-20">
       <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:space-x-24 px-10">
         <div className="flex space-x-5 mt-10  lg:flex-col lg:space-y-10 lg:space-x-0 lg:mt-0">
-          <a href="https://www.linkedin.com/in/suvendu-sekhar-sahoo/">
+          <a
+            href="https://www.linkedin.com/in/suvendu-sekhar-sahoo/"
+            target="_blank"
+            rel="noreferrer">
             <FaLinkedin
               size={30}
               className="hover:scale-125 duration-200 cursor-pointer"></FaLinkedin>
           </a>
-          <a href="https://twitter.com/suvenduDev3">
+          <a
+            href="https://twitter.com/suvenduDev3"
+            target="_blank"
+            rel="noreferrer">
             <FaTwitterSquare
               size={30}
               className="hover:scale-125 duration-200 cursor-pointer"></FaTwitterSquare>
           </a>
-          <a href="https://github.com/Hap-i">
+          <a href="https://github.com/Hap-i" target="_blank" rel="noreferrer">
             <FaGithubSquare
               size={30}
               className="hover:scale-125 duration-200 cursor-pointer"></FaGithubSquare>
@@ -76,7 +82,7 @@ function Hero() {
         <div className="">
           <img
             className="animate-porfile_animate shadow-gray-500 shadow-lg h-52 md:h-80 w-fit "
-            src="assets/profile_image.jpg"
+            src="assets/profile_image.webp"
             alt="profileImage"
           />
         </div>

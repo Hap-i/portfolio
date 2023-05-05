@@ -61,7 +61,7 @@ function Skills() {
   return (
     <div className="mt-20 md:mt-36">
       <div className="flex flex-col items-center">
-        <div className="text-5xl font-semibold mb-10">Skills</div>
+        <div className="text-3xl md:text-5xl font-semibold mb-10">Skills</div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
